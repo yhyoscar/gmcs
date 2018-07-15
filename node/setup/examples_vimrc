@@ -1,0 +1,15 @@
+syntax enable
+set ignorecase
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set showcmd
+filetype indent on
+set wildmenu
+set lazyredraw
+set incsearch
+set hlsearch
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent

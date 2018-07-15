@@ -1,2 +1,2 @@
-# gmcs
-Greenhouse mornitoring and controlling system
+# Greenhouse Monitoring and Controlling System
+
