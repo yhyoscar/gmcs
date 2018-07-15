@@ -8,7 +8,7 @@
     (1) sudo apt-get install vim
     (2) cp ./example_vimrc ~/.vimrc 
 
-3. How to set a fixed (static) IP address for raspberry pi?
+3. Set a fixed (static) IP address for raspberry pi.
 	(1) sudo vim /etc/network/interfaces
     (2) cp ./example_interfaces /etc/network/interfaces
     (3) vim /etc/network/interfaces # change inet IP address
