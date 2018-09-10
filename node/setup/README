@@ -12,5 +12,22 @@
 	(1) sudo vim /etc/network/interfaces
     (2) cp ./example_interfaces /etc/network/interfaces
     (3) vim /etc/network/interfaces # change inet IP address
-    (4) sudo reboot			
+    (4) sudo reboot
+
+4. Set up camera
+    (1) install driver:
+            sudo modprobe bcm2835-v4l2  # then you should get /dev/video0
+    (2) install motion:
+            sudo apt-get install motion
+    (3) set up configure 
+            sudo cp /etc/motion/motion.conf ~/.motion/motion.conf
+            # set target_dir, width, height, stream_localhost, etc.
+            # for detailed setting in config, see https://www.bouvet.no/bouvet-deler/utbrudd/building-a-motion-activated-security-camera-with-the-raspberry-pi-zero
+    (4) start motion
+            sudo motion -c ~/.motion/motion.conf
+
+5. Set up websever
+    (1) sudo apt-get install apache2 -y
+    (2) link you file in /var/www/html/
+
 
