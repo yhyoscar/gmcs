@@ -4,7 +4,7 @@ from datetime import datetime
 
 GPIO.setmode(GPIO.BCM) # use board numbers
 # define input pin
-pin = 17
+pin = 26
 GPIO.setup(pin, GPIO.IN)
 
 while True:
@@ -13,4 +13,6 @@ while True:
     else:
         print(datetime.now(), ' high')
 
-    time.sleep(0.5)
+    time.sleep(0.1)
+
+

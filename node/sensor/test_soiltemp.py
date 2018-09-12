@@ -49,5 +49,5 @@ def read_temp():
 # Print out the temperature until the program is stopped.
 while True:
   print(datetime.now(), read_temp())
-  time.sleep(0.5)
+  time.sleep(0.1)
 
