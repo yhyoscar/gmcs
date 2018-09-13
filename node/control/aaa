@@ -1,0 +1,106 @@
+  PID TTY          TIME CMD
+    1 ?        00:00:17 systemd
+    2 ?        00:00:00 kthreadd
+    3 ?        00:00:30 ksoftirqd/0
+    5 ?        00:00:00 kworker/0:0H
+    7 ?        00:00:00 lru-add-drain
+    8 ?        00:00:00 kdevtmpfs
+    9 ?        00:00:00 netns
+   10 ?        00:00:00 khungtaskd
+   11 ?        00:00:00 oom_reaper
+   12 ?        00:00:00 writeback
+   13 ?        00:00:00 kcompactd0
+   14 ?        00:00:00 crypto
+   15 ?        00:00:00 bioset
+   16 ?        00:00:00 kblockd
+   17 ?        00:00:00 watchdogd
+   19 ?        00:00:00 rpciod
+   20 ?        00:00:00 xprtiod
+   21 ?        00:00:00 kswapd0
+   22 ?        00:00:00 nfsiod
+   32 ?        00:00:00 kthrotld
+   33 ?        00:00:00 bioset
+   34 ?        00:00:00 bioset
+   35 ?        00:00:00 bioset
+   36 ?        00:00:00 bioset
+   37 ?        00:00:00 bioset
+   38 ?        00:00:00 bioset
+   39 ?        00:00:00 bioset
+   40 ?        00:00:00 bioset
+   41 ?        00:00:00 bioset
+   42 ?        00:00:00 bioset
+   43 ?        00:00:00 bioset
+   44 ?        00:00:00 bioset
+   45 ?        00:00:00 bioset
+   46 ?        00:00:00 bioset
+   47 ?        00:00:00 bioset
+   48 ?        00:00:00 bioset
+   49 ?        00:00:00 bioset
+   50 ?        00:00:00 bioset
+   51 ?        00:00:00 bioset
+   52 ?        00:00:00 bioset
+   53 ?        00:00:00 bioset
+   54 ?        00:00:00 bioset
+   55 ?        00:00:00 bioset
+   56 ?        00:00:00 bioset
+   57 ?        00:00:00 iscsi_eh
+   58 ?        00:00:00 dwc_otg
+   59 ?        00:00:00 DWC Notificatio
+   60 ?        00:12:21 VCHIQ-0
+   61 ?        00:00:04 VCHIQr-0
+   62 ?        00:00:00 VCHIQs-0
+   63 ?        00:00:00 VCHIQka-0
+   64 ?        00:00:00 SMIO
+   66 ?        00:01:08 irq/86-mmc1
+   68 ?        00:00:00 bioset
+   69 ?        00:00:11 mmcqd/0
+   70 ?        00:00:05 jbd2/mmcblk0p7-
+   71 ?        00:00:00 ext4-rsv-conver
+   72 ?        00:00:00 ipv6_addrconf
+   87 ?        00:01:07 systemd-journal
+   90 ?        00:00:00 kworker/0:1H
+  135 ?        00:00:01 systemd-udevd
+  155 ?        00:09:06 w1_bus_master1
+  162 ?        00:00:00 spi0
+  175 ?        00:00:00 cfg80211
+  176 ?        00:00:00 brcmf_wq/mmc1:0
+  177 ?        00:00:13 brcmf_wdog/mmc1
+  213 ?        00:00:00 systemd-timesyn
+  240 ?        00:00:00 systemd-logind
+  241 ?        00:00:00 cron
+  247 ?        00:00:01 dbus-daemon
+  264 ?        00:00:02 thd
+  268 ?        00:00:12 rsyslogd
+  271 ?        00:00:07 avahi-daemon
+  283 ?        00:00:00 avahi-daemon
+  342 ?        00:00:00 vncserver-x11-s
+  352 ?        00:00:55 vncserver-x11-c
+  371 ?        00:00:00 kworker/u3:0
+  372 ?        00:00:00 hci0
+  373 ?        00:00:00 hci0
+  374 ?        00:00:00 hciattach
+  376 ?        00:00:00 kworker/u3:2
+  380 ?        00:00:00 sshd
+  382 ttyS0    00:00:00 agetty
+  384 tty1     00:00:00 agetty
+  396 ?        00:00:12 apache2
+  468 ?        00:00:00 bluetoothd
+  474 ?        00:00:00 bluealsa
+  499 ?        00:00:00 krfcommd
+  504 ?        00:00:02 wpa_supplicant
+  647 ?        00:00:00 systemd
+  650 ?        00:00:00 (sd-pam)
+ 8409 ?        00:00:56 apache2
+ 8410 ?        00:00:57 apache2
+ 9948 ?        00:00:00 sshd
+ 9961 ?        00:00:03 sshd
+ 9964 pts/1    00:00:03 bash
+13366 ?        00:00:01 packagekitd
+13370 ?        00:00:00 polkitd
+22118 ?        00:13:26 motion
+22126 ?        00:00:01 kworker/u2:2
+22235 ?        00:00:00 kworker/u2:0
+22315 ?        00:00:00 kworker/0:1
+22378 ?        00:00:00 kworker/0:2
+22383 ?        00:00:00 kworker/u2:1
+22471 pts/1    00:00:00 ps
