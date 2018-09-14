@@ -95,7 +95,7 @@ if __name__ == '__main__':
         soilq = read_digital(ss_soilq)
         soilt = read_soilt(fname = fn_soilt)
         
-        strout = strftime('%Y-%m-%d_%H:%M:%S', gmtime())+','+str(round(airt,2))+','+str(round(airq,2)) + \
+        strout = datetime.now().strftime('%Y-%m-%d_%H:%M:%S')+','+str(round(airt,2))+','+str(round(airq,2)) + \
                 ','+str(sound)+','+str(round(light,2))+','+str(round(soilt,2))+','+str(soilq) 
         
         dt = datetime.now() - t0
