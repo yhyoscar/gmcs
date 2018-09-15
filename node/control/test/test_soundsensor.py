@@ -1,18 +1,10 @@
 import time
-import RPi.GPIO as GPIO
+from gpiozero import LightSensor
 from datetime import datetime
 
-GPIO.setmode(GPIO.BCM) # use board numbers
-# define input pin
-pin = 26
-GPIO.setup(pin, GPIO.IN)
-
+ss=LightSensor(26)
 while True:
-    if GPIO.input(pin) == GPIO.LOW:
-        print(datetime.now(), ' low')
-    else:
-        print(datetime.now(), ' high')
-
+    print(ss.value)
     time.sleep(0.1)
 
 

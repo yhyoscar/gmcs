@@ -1,11 +1,10 @@
-from gpiozero import LineSensor
+from gpiozero import LightSensor
 import time
-from datetime import datetime
 
-sensor = LineSensor(27)
+sensor = LightSensor(27)
 
 while True:
-    print(datetime.now(), sensor.value)
-    time.sleep(0.5)
+    print(sensor.value)
+    time.sleep(0.1)
 
 
