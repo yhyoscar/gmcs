@@ -25,3 +25,7 @@ motion_conf_day = 'motion.conf_day'
 
 motion_conf_night = 'motion.conf_night'
 
+keepdays = {'airtq':7, 'sound':7, 'light':7, 'soilq':7, 'soilt':7, 
+        'snapshot':7, 'motion':7}
+
+
