@@ -41,21 +41,21 @@ def move_jpg(pathin, pathout):
     flist = glob.glob(pathin+'*.jpg')
     if len(flist) > 0:
         if not os.path.isdir(pathout+'snapshot'): os.system('mkdir '+pathout+'snapshot')
-        flist = glob.glob(pathin+'snapshot*.jpg')
+        flist = glob.glob(pathin+'*snapshot*.jpg')
         if len(flist) > 0:
             dstrs = set([x.split('_')[1].split('-')[0] for x in flist])
             for dstr in dstrs:
                 if not os.path.isdir(pathout+'snapshot/'+dstr): os.system('mkdir '+pathout+'snapshot/'+dstr)
-                os.system('mv -f '+pathin+'snapshot_'+dstr+'*.jpg '+pathout+'snapshot/'+dstr+'/')
+                os.system('mv -f '+pathin+'*snapshot_'+dstr+'*.jpg '+pathout+'snapshot/'+dstr+'/')
         
         if not os.path.isdir(pathout+'motion'): os.system('mkdir '+pathout+'motion')
-        flist = glob.glob(pathin+'*-*-*-*.jpg')
+        flist = glob.glob(pathin+'*motion*.jpg')
         if len(flist) > 0:
             dstrs = set([x.split('/')[-1].split('-')[0] for x in flist])
             for dstr in dstrs:
                 dstr = dstr.strip()
                 if not os.path.isdir(pathout+'motion/'+dstr): os.system('mkdir '+pathout+'motion/'+dstr)
-                os.system('mv -f '+pathin+dstr+'-*.jpg '+pathout+'motion/'+dstr+'/')
+                os.system('mv -f '+pathin+'*motion_'+dstr+'*.jpg '+pathout+'motion/'+dstr+'/')
     return
 
 
@@ -113,15 +113,17 @@ def collect_recent(tlast):
 
     return tnow
 
+def run_collect( nodes, tlast_ss=None, tlast_pic=None):
 
+    if tlast_ss
 
-if __name__ == '__main__':
-    nodes = ['n001001']
     tlast = {node:datetime.now() for node in nodes}
-    
     collect_hist(nodes)
 
     while True:
         tlast = collect_recent( tlast = tlast )
-        sleep(dt_collect)
-
+        print('------ sleep for next collection ------')
+        for i in range(int(dt_collect)):
+            print(dt_collect - i)
+            sleep(1, end=',')
+        print(' ')
