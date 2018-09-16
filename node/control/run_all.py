@@ -13,6 +13,7 @@ def clean_pid():
         if 'motion' in x:
             pid = x.strip().split(' ')[0]
             os.system('sudo kill '+pid)
+            sleep(3)
         if 'python' in x:
             pid = x.strip().split(' ')[0]
             pids.append(pid)
@@ -20,6 +21,7 @@ def clean_pid():
     if len(pids) > 1:
         for pid in pids[:-1]:
             os.system('sudo kill '+pid)
+            sleep(3)
     return
 
 
@@ -50,6 +52,7 @@ def run_ss(codes = ['ss_airtq.py', 'ss_light.py', 'ss_sound.py', 'ss_soilt.py', 
 
 def run_motion(fconfigure):
     os.system('sudo motion -c '+fconfigure+' &')
+    sleep(3)
     return
 
 
