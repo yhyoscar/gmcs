@@ -51,7 +51,7 @@ def run_ss(codes = ['ss_airtq.py', 'ss_light.py', 'ss_sound.py', 'ss_soilt.py', 
 
 
 def run_motion(fconfigure):
-    os.system('sudo motion -c '+fconfigure+' &')
+    os.system('motion -c '+fconfigure+' &')
     sleep(3)
     return
 
