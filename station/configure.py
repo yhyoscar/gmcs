@@ -9,9 +9,11 @@ server_ip = 'oscar@129.49.67.246'
 
 server_datapath = '/disk2/yhy/Work/farm/data/'
 
+server_tmppath = '/disk2/yhy/Work/farm/data/tmp/'
+
 local_datapath = '/home/oscar/farm/data/'
 
 dt_collect = 60  # frequency of collecting data each node: seconds
 
-dt_submit  = 60  # frequency of submitting data to server
+dt_submit  = 300  # frequency of submitting data to server
 
