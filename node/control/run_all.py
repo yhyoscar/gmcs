@@ -74,4 +74,6 @@ def auto_switch(dt_switch, endtime=datetime(2019,1,1)):
 
 if __name__ == '__main__':
     auto_switch(dt_restart, endtime=datetime(2019,1,1))
+    #clean_pid()
+
 
