@@ -99,6 +99,7 @@ def submit_recent(tlast, password=password):
             # submit data to server
             cmd = 'sshpass -p "'+password+'" scp -r ./tmp_submit '+server_ip+':'+server_datapath
             print(cmd)
+            print(sorted(glob.glob('./tmp_submit/*'), key=os.path.basename) )
             print('how many files to submit: ', len(glob.glob('./tmp_submit/*')))
             os.system(cmd)
            

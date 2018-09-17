@@ -26,7 +26,6 @@ def move_jpg(pathin, pathout):
     for fstr in ['snapshot', 'motion']:
         if not os.path.isdir(pathout+fstr): os.system('mkdir '+pathout+fstr)
         flist = glob.glob(pathin+'*'+fstr+'*.jpg')
-        print(flist)
         if len(flist) > 0:
             dstrs = set([x.split('/')[-1].split('_')[2].split('-')[0] for x in flist])
             for dstr in dstrs:
@@ -85,7 +84,7 @@ def collect_recent(tlast, ss=True, pic=True, scp=True, password=password):
             else: os.system('rm -f ./tmp/*')
             
             t = datetime(tlast[node].year, tlast[node].month, tlast[node].day, \
-                    hour=tlast[node].hour, minute=tlast[node].minute, second=0)
+                    hour=tlast[node].hour, minute=tlast[node].minute, second=0) - timedelta(60)
             while t <= tnow[node]:
                 if t + timedelta(seconds=3600) < tnow[node]:
                     tstr = t.strftime('%Y%m%d-%H')
