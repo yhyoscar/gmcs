@@ -23,7 +23,7 @@ Guidelines of setting up the system
         ```
         ssh pi@raspberrypi.local
         ```
-        If there are multiple raspberry pi, try scanning the local network first:
+        If there are multiple raspberry pi, try scanning the local network first, for example:
         ```
         nmap -sn 192.168.1.1/24
         ```
