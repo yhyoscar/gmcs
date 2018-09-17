@@ -15,7 +15,7 @@ server_tmppath = '/disk2/yhy/Work/farm/data/tmp/'
 
 local_datapath = '/home/oscar/farm/data/'
 
-dt_collect = 3  # frequency of collecting data each node: seconds
+dt_collect = 60  # frequency of collecting data each node: seconds
 
 dt_submit  = 300  # frequency of submitting data to server
 
