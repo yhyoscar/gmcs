@@ -46,7 +46,7 @@ def scp_pass(var_cmd):
 
 
 # submit historical data
-def submit_hist(nodes, display=False):
+def submit_hist(nodes, display=False, password=password):
     for node in nodes:
         url = 'http://'+server_ip.split('@')[1]
         if check_url(url):
@@ -66,13 +66,13 @@ def submit_hist(nodes, display=False):
     return
 
 # tlast: {node:datetime}
-def submit_recent(tlast):
+def submit_recent(tlast, password=password):
     tnow = {}
     for node in tlast:
         url = 'http://'+server_ip.split('@')[1]
-        print(url)
+        print('try log in: ', url)
         if check_url(url):
-            print('server: ', url)
+            print('log in server successfully: ', url)
             tnow[node] = datetime.now()
             pnode = local_datapath + node +'/'
             
@@ -85,7 +85,7 @@ def submit_recent(tlast):
                 fstr = '*'+t.strftime('%Y%m%d-%H%M')+'*'
                 flist = glob.glob(pnode+'/*/*/'+fstr)
                 if len(flist) > 0:
-                    print(flist, len(flist))
+                    #print(flist, len(flist))
                     for x in flist:
                         os.system('cp -f '+x+' ./tmp_submit/')
                     #cmd = 'scp -r ./tmp_submit '+server_ip+':'+server_datapath+'/'
@@ -99,14 +99,15 @@ def submit_recent(tlast):
             # submit data to server
             cmd = 'sshpass -p "'+password+'" scp -r ./tmp_submit '+server_ip+':'+server_datapath
             print(cmd)
-            print('how many files: ', len(glob.glob('./tmp_submit/*')))
+            print('how many files to submit: ', len(glob.glob('./tmp_submit/*')))
             os.system(cmd)
            
             # random break
-            for i in range(int(np.random.rand()*50+10))[::-1]:
-                print('random break: ', i)
-                sleep(1) # don't submit data too frequently, otherwise your IP will be blocked
+            x = np.random.rand()*50+10
+            print('random break after submit: ', x)
+            sleep(x) # don't submit data too frequently, otherwise your IP will be blocked
         else:
+            print('Error: can not log in the server')
             tnow[node] = tlast[node]
 
     return tnow
@@ -143,5 +144,5 @@ if __name__ == '__main__':
     password = args.password.strip()
     
     # run 
-    run_submit(['n001001'], hist=False, tin=datetime(2018,9,15, hour=18, minute=10))
+    run_submit(['n001001'], hist=False, tin=datetime(2018,9,15, hour=23, minute=30))
 
