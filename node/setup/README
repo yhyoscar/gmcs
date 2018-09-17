@@ -4,9 +4,9 @@
     (2) Download and install Etcher from [https://etcher.io/](https://etcher.io/)
     (3) Open Etcher and format SSD card with Etcher
     (4) Enable `ssh` by creating an empty file in `/boot` folder:
-        ```
-        touch ssh
-        ```
+```
+touch ssh
+```
     (5) Enable wifi by creating file `wpa_supplicant.conf` in `/boot` folder like this:
         ```
         country=US
