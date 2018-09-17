@@ -49,7 +49,7 @@ def read_soilt(fname):
 def run_ss_soilt(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
     fname = init_soilt()
     while datetime.now() < endtime:
-        t0, fid = create_datafile(pathout, node+'_soilt', display=display)
+        t0, fid, pout, fout = create_datafile(pathout, node+'_soilt', display=display)
         fid.write('time,soilt\n')
         while (datetime.now()-t0).seconds < dt_file: 
             temp = read_soilt(fname)
@@ -57,6 +57,7 @@ def run_ss_soilt(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
             fid.write(strout+'\n')
             sleep(dt_sample)
         fid.close()
+        os.system('mv -f ./tmp/'+fout+' '+pout)
     return
 
 if __name__ == '__main__':

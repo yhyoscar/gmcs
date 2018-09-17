@@ -9,13 +9,14 @@ from util import *
 def run_ss_sound(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
     ss = LightSensor(pin)
     while datetime.now() < endtime:
-        t0, fid = create_datafile(pathout, node+'_sound', display=display)
+        t0, fid, pout, fout = create_datafile(pathout, node+'_sound', display=display)
         fid.write('time,sound\n')
         while (datetime.now()-t0).seconds < dt_file: 
             strout = datetime.now().strftime('%Y-%m-%d_%H:%M:%S')+','+str(round(ss.value,2))
             fid.write(strout+'\n')
             sleep(dt_sample)
         fid.close()
+        os.system('mv -f ./tmp/'+fout+' '+pout)
     return
 
 if __name__ == '__main__':

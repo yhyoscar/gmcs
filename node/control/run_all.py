@@ -7,21 +7,13 @@ import glob
 from configure import *
 
 def clean_pid():
-    allpid = subprocess.run(['ps', '-A'], stdout=subprocess.PIPE).stdout.decode('utf-8').strip().split('\n')
+    allpid = subprocess.run(['ps', '-k+time'], stdout=subprocess.PIPE).stdout.decode('utf-8').strip().split('\n')
     pids = []
     for x in allpid:
-        if 'motion' in x:
+        if ('motion' in x) or (('python' in x) and not ('run_all.py' in x)):
             pid = x.strip().split(' ')[0]
             os.system('sudo kill '+pid)
-            sleep(3)
-        if 'python' in x:
-            pid = x.strip().split(' ')[0]
-            pids.append(pid)
-    
-    if len(pids) > 1:
-        for pid in pids[:-1]:
-            os.system('sudo kill '+pid)
-            sleep(3)
+            sleep(1)
     return
 
 

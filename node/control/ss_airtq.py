@@ -1,6 +1,7 @@
 import Adafruit_DHT
 from time import sleep
 from datetime import datetime, timedelta
+import os
 
 from configure import *
 from util import *
@@ -13,7 +14,7 @@ def read_airtq(pin):
 
 def run_ss_airtq(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
     while datetime.now() < endtime:
-        t0, fid = create_datafile(pathout, node+'_airtq', display=display)
+        t0, fid, pout, fout = create_datafile(pathout, node+'_airtq', display=display)
         fid.write('time,Tair,RHair\n')
         while (datetime.now()-t0).seconds < dt_file: 
             airt, airq = read_airtq(pin)
@@ -21,6 +22,8 @@ def run_ss_airtq(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
             fid.write(strout+'\n')
             sleep(dt_sample)
         fid.close()
+        os.system('mv -f ./tmp/'+fout+' '+pout)
+
     return
 
 if __name__ == '__main__':
