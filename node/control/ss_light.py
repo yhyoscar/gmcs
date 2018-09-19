@@ -21,6 +21,6 @@ def run_ss_light(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
     return
 
 if __name__ == '__main__':
-    run_ss_light(pin=pin_sound, pathout=path_ssout+'light/', endtime=datetime(2019,1,1), \
+    run_ss_light(pin=pin_light, pathout=path_ssout+'light/', endtime=datetime(2019,1,1), \
             dt_file=filetimegap, dt_sample=1.0, display=False)
 
