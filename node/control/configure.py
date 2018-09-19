@@ -19,6 +19,9 @@ path_ssout = '/home/pi/farm/data/sensors/'
 
 node = 'n001002'
 
+if node == 'n001001': analog = False
+else: analog = True
+
 filetimegap   = 60  # time gap between files: 60 seconds
 
 dt_restart = 3600 # restart camera and sensors: 1 hour

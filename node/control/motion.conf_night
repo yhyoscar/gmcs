@@ -104,7 +104,7 @@ height 768
 
 # Maximum number of frames to be captured per second.
 # Valid range: 2-100. Default: 100 (almost no limit).
-framerate 10
+framerate 5
 
 # Minimum time in seconds between capturing picture frames from the camera.
 # Default: 0 = disabled - the capture rate is given by the camera framerate.
@@ -183,7 +183,7 @@ hue 0
 ############################################################
 
 # Number of frames to capture in each roundrobin step (default: 1)
-roundrobin_frames 2
+roundrobin_frames 1
 
 # Number of frames to skip before each roundrobin step (default: 1)
 roundrobin_skip 1
@@ -198,7 +198,7 @@ switchfilter on
 
 # Threshold for number of changed pixels in an image that
 # triggers motion detection (default: 1500)
-threshold 1500
+threshold 3000
 
 # Automatically tune the threshold down if possible (default: off)
 threshold_tune off
@@ -232,12 +232,12 @@ smart_mask_speed 0
 
 # Ignore sudden massive light intensity changes given as a percentage of the picture
 # area that changed intensity. Valid range: 0 - 100 , default: 0 = disabled
-lightswitch 50
+lightswitch 80
 
 # Picture frames must contain motion at least the specified number of frames
 # in a row before they are detected as true motion. At the default of 1, all
 # motion is detected. Valid range: 1 to thousands, recommended 1-5
-minimum_motion_frames 2
+minimum_motion_frames 3
 
 # Specifies the number of pre-captured (buffered) pictures from before motion
 # was detected that will be output at motion detection.

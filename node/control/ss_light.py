@@ -24,6 +24,8 @@ def run_ss_light(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False, a
     return
 
 if __name__ == '__main__':
-    run_ss_light(pin=channel_light, pathout=path_ssout+'light/', endtime=datetime(2019,1,1), \
-            dt_file=filetimegap, dt_sample=1.0, display=False, analog=True)
+    if analog: pin = channel_light
+    else: pin = pin_light
+    run_ss_light(pin, pathout=path_ssout+'light/', endtime=datetime(2019,1,1), \
+            dt_file=filetimegap, dt_sample=1.0, display=False, analog=analog)
 
