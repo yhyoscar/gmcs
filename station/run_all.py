@@ -17,13 +17,14 @@ def run_collect_submit(tlast):
         while True:
             print('------------- collect data --------------')
             tlast = collect_recent(tlast, password=password_node)
-            print('time break of collecting data (seconds): ', format(dt_collect), '...')
-            sleep(dt_collect)
 
             if k % ncollect_per_submit == 0:
                 print('========= submit data ==============')
                 tlast_submit = submit_recent(tlast_submit, password=password_server)
+            
             k += 1
+            print('time break of collecting data (seconds): ', format(dt_collect), '...')
+            sleep(dt_collect)
 
     else:
         print('Error: please input passwords of nodes and server')
@@ -40,6 +41,6 @@ if __name__ == "__main__":
     password_node = args.password_node.strip()
     password_server = args.password_server.strip()
 
-    run_collect_submit( tlast = {node:datetime(2018,9,16,hour=13,minute=10) for node in ['n001001']})
+    run_collect_submit( tlast = {node:datetime(2018,9,17,hour=16, minute=20) for node in ['n001001']})
 
 
