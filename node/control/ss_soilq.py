@@ -6,8 +6,11 @@ from configure import *
 from util import *
 
 
-def run_ss_soilq(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
-    ss = LightSensor(pin)
+def run_ss_soilq(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False, analog=True):
+    if analog:
+        ss = MCP3008(pin)
+    else:
+        ss = LightSensor(pin)
     while datetime.now() < endtime:
         t0, fid, pout, fout = create_datafile(pathout, node+'_soilq', display=display)
         fid.write('time,soilq\n')
@@ -20,6 +23,6 @@ def run_ss_soilq(pin, pathout, dt_file, endtime, dt_sample=0.1, display=False):
     return
 
 if __name__ == '__main__':
-    run_ss_soilq(pin=pin_sound, pathout=path_ssout+'soilq/', endtime=datetime(2019,1,1), \
-            dt_file=filetimegap, dt_sample=1.0, display=False)
+    run_ss_soilq(pin=channel_soilq, pathout=path_ssout+'soilq/', endtime=datetime(2019,1,1), \
+            dt_file=filetimegap, dt_sample=1.0, display=False, analog=True)
 
