@@ -44,7 +44,7 @@ Guidelines of setting up the system
     + (4) `sudo reboot`
 
 4. Set up camera
-    + !!! enable cameral: !!!
+    + !!! enable camera: !!!
         sudo apt-get update
         sudo apt-get upgrade
         sudo raspi-config -> Interfacing Options -> Camera -> enable the camera
