@@ -21,7 +21,8 @@ Guidelines of setting up the system
         ```
     + (6) Start raspberry pi and ssh into it:
         ```
-        ssh pi@raspberrypi.local
+        ssh pi@raspberrypi.local  # default pswd is: raspberry
+	
         ```
         If there are multiple raspberry pi, try scanning the local network first, for example:
         ```
