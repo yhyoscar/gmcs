@@ -45,13 +45,11 @@ Guidelines of setting up the system
     + (4) `sudo reboot`
 
 4. Set up camera
-    + enable camera:
-    + 	```
+    + enable camera: ```
         sudo apt-get update
         sudo apt-get upgrade
         sudo raspi-config # -> Interfacing Options -> Camera -> enable the camera
-        sudo reboot
-	```
+        sudo reboot ```
     + (1) install driver:
             sudo modprobe bcm2835-v4l2  # then you should get /dev/video0
     + (2) install motion:
