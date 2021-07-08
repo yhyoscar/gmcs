@@ -46,8 +46,8 @@ Guidelines of setting up the system
 
 4. Set up camera
     + enable camera: ```
-        sudo apt-get update;
-        sudo apt-get upgrade;
+        sudo apt-get update -y;
+        sudo apt-get upgrade -y;
         sudo raspi-config; # -> Interfacing Options -> Camera -> enable the camera
         sudo reboot ```
     + (1) install driver:
