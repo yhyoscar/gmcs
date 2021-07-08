@@ -1,7 +1,8 @@
 Guidelines of setting up the system
 
 1. Install raspbian OS on SSD card.
-    + (1) Download raspbian (version without desktop) from [raspbian website](https://www.raspberrypi.org/downloads/raspbian/) 
+    + (1) Download raspbian lite (version without desktop) from [raspbian website](https://www.raspberrypi.org/downloads/raspbian/) 
+    	- The new version may not work. Please use the older version: https://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2020-02-14/
     + (2) Download and install Etcher from [https://etcher.io/](https://etcher.io/)
     + (3) Open Etcher and format SSD card with Etcher
     + (4) Enable `ssh` by creating an empty file in `/boot` folder:
